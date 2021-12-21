@@ -15,10 +15,10 @@ Use the vault config in this repo to get a vault server running.
 ```vault server -config=vault.hcl```
 
 Login to http://vault-ip:8200/ui 
-and unseal vault using the GUI using 1 key shares and threshold.
-Save the file.
+and unseal vault using the GUI with 1 key shares and threshold.
+Save the file. You will need it every time your restart vault.
 
-Follow the guide on vault credential manager section `Configuring the secrets engine`
+Follow the guide on [vault credential manager](https://concourse-ci.org/vault-credential-manager.html) section `Configuring the secrets engine`
 
 Use the `approle` auth backend to auth to vault.
 
@@ -36,6 +36,3 @@ Add a dummy secret named `demo` under `concourse/main/gcp` with some key and val
 Reference the secret you created in your `job.yml` using the syntax `((gcp.demo))`.
 
 Try adding GCP OAUTH token on JSON key in vault and use it in your pipeline.
-
-
-
