@@ -35,4 +35,4 @@ Add a dummy secret named `demo` under `concourse/main/gcp` with some key and val
 
 Reference the secret you created in your `job.yml` using the syntax `((gcp.demo))`.
 
-Try adding GCP OAUTH token on JSON key in vault and use it in your pipeline.
+Try adding GCP OAUTH token or JSON key in vault and use it in your pipeline.
